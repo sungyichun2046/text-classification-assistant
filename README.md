@@ -1,7 +1,6 @@
 ## text-classification-assistant with streamlit, AsyncOpenAI and Docker
 
-[text_assistant_demo.webm](https://github.com/user-attachments/assets/17e510d8-2115-47f1-ab9c-20ebf0d3191a)
-
+[text_assistant_demo.webm](https://github.com/user-attachments/assets/de8c7937-2bc5-4fd0-9611-c34ec9b5063b)
 
 ### User interface using Streamlit
  * Add config.py to the root of this project
