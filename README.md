@@ -20,13 +20,18 @@ OPEN_API_KEY='sk-********************'
    * Entry list of categories separated by comma and classify them
 
 ### Auto evaluation with accuracy, F1-score and LLM as judge score
- * Categorize `data/spam/annotated.csv` using UI, use spam,ham as list of categories, to be able to evaluate result
- * Dowanload the output csv in `data/spam/results.csv`
+ * Categorize `data/spam/annotated.csv` using UI, use `spam,ham` as list of categories, to be able to evaluate result
+ * Download the output csv in `data/spam/results.csv`
  * Run ```python evaluation.py```
 
 ### Results 
  * Evaluation result: ```Accuracy = 97%, F1 score = 97%, LLM judge score = 99% on Spam-Ham dataset containing 5572 data.```
  * The execution time is 1 minute on 5572 data on user interface
+ * Folder `data`
+   * `results.csv`: output of UI, input of evaluation.py, containing `index`, `text,category`, `explanation` (explanation of choice of category) 
+   * `annotated.csv`: input of evaluation.py, containing `Message` (text to classify) and `Category` (annotations: spam/ham)
+   * `evaluation.csv`: output containing `text`, `category`, `explanation`, `rating`, `rating_reason`, `suggested_instruction`
+   * `metrics.csv`: output containing date `text`, `category`, `explanation`, `rating`, `rating_reason`, `suggested_instruction`
 
 ### Project structure
 ```commandline
@@ -34,8 +39,8 @@ OPEN_API_KEY='sk-********************'
 ├── config.py
 ├── data
 │   └── spam
-│       ├── annotated.csv
-│       ├── evaluation.csv
+│       ├── annotated.csv 
+│       ├── evaluation.csv 
 │       ├── metrics.csv
 │       └── results.csv
 ├── Dockerfile
